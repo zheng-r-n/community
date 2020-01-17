@@ -10,6 +10,7 @@ public class HelloController {
     @GetMapping("/hello")
     public String hello(@RequestParam(name = "name") String name, Model model){
         model.addAttribute("name",name);
+        System.out.println(name);
         return "hello";
     }
 }
